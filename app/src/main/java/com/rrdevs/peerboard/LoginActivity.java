@@ -79,7 +79,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         Spinner uniSpinner = (Spinner) findViewById(R.id.uSelection);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.list_universities, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        uniSpinner.setAdapter(adapter); //This is aTerryta comment
+        uniSpinner.setAdapter(adapter); //This is aTerrytaRichaRa comment
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
