@@ -6,7 +6,7 @@ import java.sql.*;
 
 
 public class DBCompare {
-    private static authenticateLogin(String email, String pwd) throws SQLException {
+    public static int authenticateLogin(String email, String pwd) throws SQLException {
         String url 		= "jdbc:oracle:thin:@rrdevmydb.cwa8zfgibaxd.us-west-2.rds.amazonaws.com:1521:peerbord";
         String username 	= "rrdevpb";
         String password 	= "devpeerboard";
@@ -70,15 +70,18 @@ public class DBCompare {
 
         if(uEmail == ""){
             //TODO: Send them back saying email address is not registered
+            return -1;
         }
 
-        if(uVeriPIN != null){
+        if(uVeriPIN != 0){
             //#TODO: Send them to verification page
+            return uVeriPIN;
         }
 
         String dbpwd = uSalt + uPwd;
         if(dbpwd != pwd){
             //#TODO: Send back saying wrong password
+            return -2;
         }
     }
 }

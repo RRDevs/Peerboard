@@ -29,6 +29,7 @@ import android.widget.TextView;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -266,6 +267,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             String salt;
             String pword;
             String pwd = "";
+            int veriPIN = 0;
 
             // TODO: attempt authentication against a network service.
             try {
@@ -278,8 +280,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 e.printStackTrace();
             }
 
-            DBCompare.authenticateLogin(mEmail, pwd);
-
+            try {
+                veriPIN = DBCompare.authenticateLogin(mEmail, pwd);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
 
 
             //Rayun: code for database communication
