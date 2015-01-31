@@ -27,6 +27,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +55,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private Spinner uniSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,11 +76,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 return false;
             }
         });
-
-        Spinner uniSpinner = (Spinner) findViewById(R.id.uSelection);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.list_universities, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        uniSpinner.setAdapter(adapter); //This is aTerrytaRichaRa comment
 
         Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
@@ -267,14 +263,26 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
+            String salt;
+            String pword;
+            String pwd = "";
 
+            // TODO: attempt authentication against a network service.
             try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
+                salt = Sha1Hash.SHA1(mEmail);
+                pword = Sha1Hash.SHA1(mPassword);
+                pwd = Sha1Hash.SHA1(salt + pword);
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
             }
+
+            DBCompare.authenticateLogin(mEmail, pwd);
+
+
+
+            //Rayun: code for database communication
 
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
