@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Rayun\Peerboard\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Rayun\Peerboard\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-e4c60a0e3105f48b78129f2ba6ed9471589c3c4c.jar" />
+    </item>
+    <item
+        jar="C:\Rayun\Peerboard\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Rayun\Peerboard\app\build\intermediates\pre-dexed\debug\classes-0f50598c48691df83f51f8a9ff4f3186da84c804.jar" />
+    </item>
+    <item
+        jar="C:\Rayun\Peerboard\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Rayun\Peerboard\app\build\intermediates\pre-dexed\debug\classes-24404a69a3c8db6ea1a1de00d1f59cfd5718414e.jar" />
+    </item>
+    <item
+        jar="C:\Rayun\Peerboard\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Rayun\Peerboard\app\build\intermediates\pre-dexed\debug\classes-5cbd204938c4eb0fda28f68653bfe3982c02412e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Rifat\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Rayun\Peerboard\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-c02c7cffeafadda66339d5e6824f83dcf10288f3.jar" />
+    </item>
+
+</items>
