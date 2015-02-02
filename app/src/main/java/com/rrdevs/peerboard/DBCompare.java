@@ -83,6 +83,7 @@ public class DBCompare {
             //#TODO: Send back saying wrong password
             return -2;
         }
+        //#TODO: Successful login, handle it at activity_login
 		return 0;
     }
 }
