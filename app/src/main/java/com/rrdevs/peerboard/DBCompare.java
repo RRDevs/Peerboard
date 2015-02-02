@@ -83,5 +83,6 @@ public class DBCompare {
             //#TODO: Send back saying wrong password
             return -2;
         }
+		return 0;
     }
 }
